@@ -5,11 +5,14 @@ import { PaymentMethods } from './features/checkout/components/payment-methods/p
 import { EmailConfirmationComponent } from './features/auth/components/EmailConfirmation/EmailConfirmation.component';
 
 import { ProductDetailPageComponent } from './features/products/components/product-details/product-details';
+import { CartItemsComponent } from './features/cart/components/cart-items/cart-items';
+import { FullCartItemsComponent } from './shared/components/full-cart/full-cart-items'; // إضافة الـ import
 
-export const routes: Routes =[
-
+export const routes: Routes = [
   { path: 'signup', component: SignUp },
   { path: 'login', component: LoginComponent },
+  { path: 'cart', component: CartItemsComponent },
+  { path: 'full-cart', component: FullCartItemsComponent }, // إضافة route جديد
   { path: '', redirectTo: 'signup', pathMatch: 'full' },
     {path: 'confirm-email', component: EmailConfirmationComponent},
   { path: 'product-details/:id', component: ProductDetailPageComponent },
@@ -20,8 +23,3 @@ export const routes: Routes =[
 ];
 
 export const appRouterProviders = provideRouter(routes);
-
-
-
-
-

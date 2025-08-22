@@ -14,11 +14,3 @@ bootstrapApplication(AppComponent, {
    provideHttpClient(withInterceptors([authInterceptor]))]
 });
 
-bootstrapApplication(undefined as any, {
-  providers: [
-    provideHttpClient(),
-    provideRouter(routes),
-  ],
-}).catch(err => console.error(err));
-
-
